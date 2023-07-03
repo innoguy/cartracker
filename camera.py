@@ -73,7 +73,10 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         PACKET["vehicle_info"]["type"]=car["Category"]
         PACKET["vehicle_info"]["color"]=random.choice(colors)
         data = json.dumps(PACKET)
-        s.sendall(bytes(data, encoding="utf-8"))
+        try:
+            s.sendall(bytes(data, encoding="utf-8"))
+        except Exception as e:
+            pass
         print(data)
         time.sleep(10)
 
