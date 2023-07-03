@@ -66,7 +66,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         index = random.randrange(total)
         car = cars[index]
         PACKET["capture_timestamp"]=str(int(time.time()))
-        PACKET["plateUTF8"]=random_plate()
+        PACKET["plateText"]=random_plate()
         PACKET["plateCountry"]=random.choice(state_names)
         PACKET["vehicle_info"]["brand"]=car["Make"]
         PACKET["vehicle_info"]["model"]=car["Model"]
