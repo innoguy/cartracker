@@ -44,7 +44,7 @@ while True:
               "brand":jstring["vehicle_info"]["brand"],
               "model":jstring["vehicle_info"]["model"],
               "type":jstring["vehicle_info"]["type"],
-              "type":jstring["vehicle_info"]["color"]
+              "color":jstring["vehicle_info"]["color"]
               }
             sdata = json.dumps(short_json)
             s_out.sendall(bytes(sdata, encoding="utf-8"))
