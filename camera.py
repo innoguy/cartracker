@@ -7,7 +7,7 @@ import string
 import random
 from datetime import datetime
 
-cars = json.load(open('carsample.json')) 
+cars = json.load(open('/home/pi/cartracker/carsample.json')) 
 total = len(cars)
 
 HOST = "192.168.1.1"  # The server's hostname or IP address
@@ -78,6 +78,6 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         except Exception as e:
             pass
         print(data)
-        time.sleep(10)
+        time.sleep(0.5)
 
 
