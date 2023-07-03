@@ -1,0 +1,13 @@
+[Unit]
+Description=SCI Smart Camera Interface service 
+After=network.target
+
+[Service]
+ExecStart=/home/pi/gateway.py 
+Restart=always
+User=root
+Group=root
+Type=simple
+
+[Install]
+WantedBy=multi-user.target

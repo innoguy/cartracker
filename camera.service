@@ -1,0 +1,13 @@
+[Unit]
+Description=Axis CAMMRA emulation 
+After=network.target
+
+[Service]
+ExecStart=/home/pi/camera.py 
+Restart=always
+User=root
+Group=root
+Type=simple
+
+[Install]
+WantedBy=multi-user.target
